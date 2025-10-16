@@ -1,0 +1,671 @@
+
+:root {
+
+/* Colors: */
+--unnamed-color-705aaa: #705AAA;
+--unnamed-color-cbc8d4: #CBC8D4;
+--activestate_bg_2: #D8FCF7;
+--activestate_bg_1: #01F0D0;
+--unnamed-color-0bd984: #0BD984;
+--unnamed-color-072635: #072635;
+--unnamed-color-0c3d5d: #0C3D5D;
+--unnamed-color-084c77: #084C77;
+--unnamed-color-055a92: #055A92;
+--unnamed-color-006aac: #006AAC;
+--unnamed-color-007bc7: #007BC7;
+--unnamed-color-707070: #707070;
+--unnamed-color-f6f6f6: #F6F6F6;
+--unnamed-color-ededed: #EDEDED;
+--unnamed-color-000000: #000000;
+--unnamed-color-878787: #878787;
+--unnamed-color-ffffff: #FFFFFF;
+--unnamed-color-ff6200: #FF6200;
+
+/* Font/text values */
+--unnamed-font-family-manrope: 'Manrope', system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--unnamed-font-style-normal: normal;
+--unnamed-font-weight-800: 800;
+--unnamed-font-weight-normal: 400;
+--unnamed-font-weight-bold: 700;
+--unnamed-font-size-14: 14px;
+--unnamed-font-size-18: 18px;
+--unnamed-font-size-24: 24px;
+--unnamed-character-spacing-0: 0px;
+--unnamed-line-spacing-19: 19px;
+--unnamed-line-spacing-24: 24px;
+--unnamed-line-spacing-33: 33px;
+--unnamed-text-transform-titlecase: capitalize;
+}
+
+/* Character Styles */
+.card-title-24pt {
+  font-family: var(--unnamed-font-family-manrope);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-800);
+  font-size: var(--unnamed-font-size-24);
+  line-height: var(--unnamed-line-spacing-33);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+}
+.inner-card-title-18pt {
+  font-family: var(--unnamed-font-family-manrope);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-18);
+  line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-transform: var(--unnamed-text-transform-titlecase);
+}
+.body-emphasized-14pt {
+  font-family: var(--unnamed-font-family-manrope);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-14);
+  line-height: var(--unnamed-line-spacing-19);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+}
+.body-secondary-info-14pt {
+  font-family: var(--unnamed-font-family-manrope);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-14);
+  line-height: var(--unnamed-line-spacing-19);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-707070);
+}
+.body-regular-14 {
+  font-family: var(--unnamed-font-family-manrope);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-14);
+  line-height: var(--unnamed-line-spacing-19);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+}
+
+/* Base layout and utility */
+*{box-sizing:border-box;margin:0;padding:0;}
+body {
+  background: #F6F6F6;
+  font-family: var(--unnamed-font-family-manrope);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--unnamed-color-072635);
+}
+
+/* Top bar */
+.topbar {
+  background: var(--unnamed-color-ffffff);
+  padding: 12px 24px;
+  border-radius: 16px;
+  margin: 16px;
+  box-shadow: none;
+}
+.topbar .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  font-family: var(--unnamed-font-family-manrope);
+  color: var(--unnamed-color-072635);
+}
+.nav {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+}
+.nav-item {
+  position: relative;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--unnamed-color-072635);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.nav-item.active {
+  background: linear-gradient(90deg, var(--activestate_bg_1), var(--unnamed-color-0bd984));
+  color: var(--unnamed-color-072635);
+  font-weight: 700;
+}
+.user-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.user-meta .name {
+  font-size: 14px;
+}
+.user-meta .role {
+  font-size: 12px;
+}
+.settings, .more {
+  margin-left: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Layout grid */
+.layout {
+  display: flex;
+  gap: 24px;
+  padding: 0 16px 40px;
+  align-items: flex-start;
+}
+.patients-sidebar {
+  width: 260px;
+  background: var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: none;
+}
+.search-wrapper {
+  position: relative;
+}
+.search-wrapper input {
+  width: 100%;
+  padding: 10px 36px 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--unnamed-color-ededed);
+  font-size: 14px;
+}
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.patient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 620px;
+  overflow-y: auto;
+}
+.patient-entry {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.patient-entry.selected {
+  background: var(--activestate_bg_2);
+}
+.patient-entry .thumb img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.patient-entry .dots {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+/* Main grid */
+.main-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* Diagnosis history card */
+.diagnosis-history-card {
+  grid-column: 1 / span 2;
+  background: var(--unnamed-color-cbc8d4);
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.diagnosis-history-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bp-chart-wrapper {
+  flex: 1;
+}
+.bp-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+.bp-stats .stat {
+  background: var(--unnamed-color-ffffff);
+  padding: 16px;
+  border-radius: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bp-stats .stat .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+.bp-stats .stat .systolic {
+  background: #E8C1F0;
+}
+.bp-stats .stat .diastolic {
+  background: #C1D1F0;
+}
+
+/* Metric small cards row */
+.metrics-row {
+  grid-column: 1 / span 2;
+  display: flex;
+  gap: 16px;
+  margin-top: -8px;
+}
+.small-card {
+  flex: 1;
+  background: var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  box-shadow: none;
+}
+.small-card .icon-circle {
+  background: var(--unnamed-color-f6f6f6);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.small-card .content .value {
+  margin: 4px 0;
+}
+
+/* Diagnostic list table */
+.diagnostic-list-card {
+  background: var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: none;
+}
+.table-wrapper {
+  margin-top: 12px;
+  overflow: auto;
+}
+.diagnostic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--unnamed-font-family-manrope);
+}
+.diagnostic-table thead {
+  background: var(--unnamed-color-f6f6f6);
+  border-radius: 12px;
+}
+.diagnostic-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--unnamed-color-072635);
+}
+.diagnostic-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--unnamed-color-ededed);
+  font-size: 14px;
+  color: var(--unnamed-color-072635);
+}
+.diagnostic-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Right sidebar and Lab Results */
+.right-sidebar {
+  width: 367px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.lab-results.card {
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--unnamed-color-ffffff);
+  box-shadow: none;
+}
+.labs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+.lab-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--unnamed-color-f6f6f6);
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+.lab-name {
+  flex: 1;
+}
+.download {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* Patient card panel (right sidebar) */
+.patient-card-panel {
+  width: 367px;
+  max-width: 100%;
+  background: var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: none;
+  position: relative;
+}
+.patient-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.avatar-wrapper {
+  margin-top: 0;
+}
+.avatar-large {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--unnamed-color-ffffff);
+  box-shadow: none;
+  background: #f0f4f9;
+}
+.patient-info { width: 100%; } /* fixed width */
+
+.patient-info { width: 100%;
+}
+
+
+.show-all-btn {
+  background: linear-gradient(90deg, var(--activestate_bg_1) 0%, var(--unnamed-color-0bd984) 100%);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: var(--unnamed-font-family-manrope);
+  cursor: pointer;
+  color: var(--unnamed-color-072635);
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-transform: none;
+  box-shadow: none;
+  transition: transform .15s ease, filter .15s ease;
+}
+.show-all-btn:hover { }
+.show-all-btn:active {
+  transform: translateY(1px);
+}
+
+
+.info-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+
+/* Overrides to refine patient card per XD feedback */
+.patient-card-panel .info-list {
+  gap: 24px; /* more breathing room between items */
+}
+
+.patient-card-panel .info-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.patient-card-panel .info-item .text {
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+
+.patient-card-panel .icon-circle {
+  background: var(--unnamed-color-f6f6f6);
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-all-btn {
+  box-shadow: none !important;
+  /* keep gradient and padding, remove glow */
+}
+
+
+
+/* Icon container refinements: border radius + spacing (padding) + border */
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--unnamed-color-f6f6f6);
+  border: 1px solid var(--unnamed-color-ededed);
+  padding: 10px;
+  flex-shrink: 0;
+}
+/* Ensure spacing between multiple icons if present */
+.icon-group {
+  display: flex;
+  gap: 12px;
+}
+
+
+/* Adjust patient card avatar and name centering and spacing */
+.patient-card-panel .avatar-large {
+  width: 150px;
+  height: 150px;
+}
+.patient-card-panel .patient-info h1 {
+  text-align: center;
+}
+.patient-card-panel .info-list {
+  gap: 32px;
+}
+.patient-card-panel .info-item {
+  padding: 4px 0;
+}
+
+
+/* Revised Diagnosis History layout to match XD */
+.diagnosis-history-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.diagnosis-history-card {
+  background: transparent;
+  padding: 0;
+}
+.diagnosis-history-inner {
+  background: #E8E7F8; /* approximate light purple - adjust to exact if provided */
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.inner-bp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.diagnosis-history-content {
+  display: flex;
+  gap: 24px;
+}
+.chart-area {
+  flex: 2;
+}
+.diagnosis-history-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 24px;
+  border-left: 1px solid rgba(7,38,53,0.1);
+}
+.stat-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.stat-value {
+  font-weight: 800;
+}
+.divider {
+  height: 1px;
+  background: rgba(7,38,53,0.1);
+  border-radius: 1px;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot.systolic {
+  background: #E89AF0; /* pink-ish */
+}
+.dot.diastolic {
+  background: #705AAA; /* purple */
+}
+
+
+/* Wrapper for diagnosis history + metric cards */
+.history-metrics-wrapper {
+  background: var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0px 10px 40px rgba(7, 38, 53, 0.06);
+}
+
+/* Adjust small cards to match XD: tinted backgrounds */
+.resp-card {
+  background: var(--activestate_bg_2); /* light aqua */
+}
+.temp-card { background: #FFE6EB; }
+.hr-card { background: #FFE6F1; } /* heart rate card per spec */t pink */
+}
+
+/* Icon circle inside metric card should be white with subtle shadow */
+.small-card .icon-circle {
+  background: var(--unnamed-color-ffffff);
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 8px 20px rgba(7,38,53,0.06);
+  flex-shrink: 0;
+}
+.small-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.small-card .value {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Ensure diagnostic list sits below and spans full left area */
+.diagnostic-list-card {
+  grid-column: 1 / span 2;
+}
+
+.logo-img {
+  height: 28px;
+  display: block;
+}
+.metric-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.icon-circle img.metric-icon {
+  width: 48px;
+  height: 48px;
+}
+
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.dropdown-arrow {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.inline-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.small-icon {
+  width: 20px;
+  height: 20px;
+}

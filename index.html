@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Jessica Taylor | Patient Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top nav -->
+  <header class="topbar">
+    <div class="container">
+      <div class="logo"><img src="assets/icons/TestLogo@2x.png" alt="Tech.Care" class="logo-img" /></div>
+      <nav class="nav">
+        <a href="#" class="nav-item">Overview</a>
+        <a href="#" class="nav-item active"><img src="assets/icons/group_FILL0_wght300_GRAD0_opsz24@2x.png" alt="Patients" class="nav-icon" /> Patients</a>
+        <a href="#" class="nav-item"><img src="assets/icons/calendar_today_FILL0_wght300_GRAD0_opsz24@2x.png" alt="Schedule" class="nav-icon" /> Schedule</a>
+        <a href="#" class="nav-item"><img src="assets/icons/chat_bubble_FILL0_wght300_GRAD0_opsz24@2x.png" alt="Message" class="nav-icon" /> Message</a>
+        <a href="#" class="nav-item"><img src="assets/icons/credit_card_FILL0_wght300_GRAD0_opsz24@2x.png" alt="Transactions" class="nav-icon" /> Transactions</a>
+      </nav>
+      <div class="user-cta">
+        <div class="user-info">
+          <div class="user-avatar">
+            <img src="assets/images/doctor@2x.png" alt="Dr. Jose Simmons" />
+          </div>
+          <div class="user-meta">
+            <div class="name body-emphasized-14pt">Dr. Jose Simmons</div>
+            <div class="role body-secondary-info-14pt">General Practitioner</div>
+          </div>
+        </div>
+        <div class="settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06c.48.48 1.08.7 1.82.33H9c.7 0 1.27.55 1.51 1 .19.33.46.6.79.79.23.1.48.16.74.16s.51-.06.74-.16c.33-.19.6-.46.79-.79.24-.45.81-1 1.51-1h.09a2 2 0 1 1 0 4h-.09c-.7 0-1.27.55-1.51 1a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1 2.83 2.83l-.06.06c-.48.48-.7 1.08-.33 1.82.24.45.81 1 1.51 1H21a2 2 0 1 1 0 4h-.09c-.7 0-1.27.55-1.51 1z"/>
+          </svg>
+        </div>
+        <div class="more">⋯</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar patient list -->
+    <aside class="sidebar patients-sidebar">
+      <div class="section-title inner-card-title-18pt">Patients</div>
+      <div class="search-wrapper">
+        <input type="text" placeholder="Search" aria-label="Search patients" />
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </div>
+      <div class="patient-list">
+        <div class="patient-entry">
+          <div class="thumb">
+            <img src="assets/avatars/emily-williams@2x.png" alt="Emily Williams" />
+          </div>
+          <div class="text">
+            <div class="name body-emphasized-14pt">Emily Williams</div>
+            <div class="sub body-secondary-info-14pt">Female, 18</div>
+          </div>
+          <div class="dots">⋯</div>
+        </div>
+        <div class="patient-entry">
+          <div class="thumb">
+            <img src="assets/avatars/ryan-johnson@2x.png" alt="Ryan Johnson" />
+          </div>
+          <div class="text">
+            <div class="name body-emphasized-14pt">Ryan Johnson</div>
+            <div class="sub body-secondary-info-14pt">Male, 45</div>
+          </div>
+          <div class="dots">⋯</div>
+        </div>
+        <div class="patient-entry selected">
+          <div class="thumb">
+            <img src="assets/avatars/jessica-taylor@2x.png" alt="Jessica Taylor" />
+          </div>
+          <div class="text">
+            <div class="name body-emphasized-14pt">Jessica Taylor</div>
+            <div class="sub body-secondary-info-14pt">Female, 28</div>
+          </div>
+          <div class="dots">⋯</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-grid">
+      <!-- Diagnosis history and chart -->
+      
+<div class="history-metrics-wrapper">
+<section class="diagnosis-history-wrapper">
+  <div class="title-wrapper">
+    <div class="title card-title-24pt">Diagnosis History</div>
+  </div>
+  <div class="diagnosis-history-card">
+    <div class="diagnosis-history-inner">
+      <div class="inner-bp-header">
+        <div class="bp-left">
+          <div class="bp-title body-emphasized-14pt">Blood Pressure</div>
+        </div>
+        <div class="bp-filter">
+          <div class="label body-regular-14">Last 6 months <img src="assets/icons/expand_more_FILL0_wght300_GRAD0_opsz24@2x.png" alt="dropdown" class="dropdown-arrow" /></div>
+        </div>
+      </div>
+      <div class="diagnosis-history-content">
+        <div class="chart-area">
+          <div class="chart-container">
+            <canvas id="bpChart" aria-label="Blood pressure history chart" role="img"></canvas>
+          </div>
+        </div>
+        <div class="diagnosis-history-stats">
+          <div class="stat-group">
+            <div class="stat-label">
+              <div class="dot systolic"></div>
+              <div class="body-secondary-info-14pt">Systolic</div>
+            </div>
+            <div class="stat-value card-title-24pt">160</div>
+            <div class="stat-sub body-secondary-info-14pt">Higher than Average</div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat-group">
+            <div class="stat-label">
+              <div class="dot diastolic"></div>
+              <div class="body-secondary-info-14pt">Diastolic</div>
+            </div>
+            <div class="stat-value card-title-24pt">78</div>
+            <div class="stat-sub body-secondary-info-14pt">Lower than Average</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Metric cards -->
+      <section class="metrics-row">
+        <div class="small-card resp-card">
+          <div class="icon-circle"><img src="assets/icons/respiratory-rate@2x.png" alt="Respiratory Rate" class="metric-icon" /></div>
+          <div class="content">
+            <div class="title body-emphasized-14pt">Respiratory Rate</div>
+            <div class="value card-title-24pt">20 bpm</div>
+            <div class="sub body-secondary-info-14pt">Normal</div>
+          </div>
+        </div>
+        <div class="small-card temp-card">
+          <div class="icon-circle"><img src="assets/icons/temperature@2x.png" alt="Temperature" class="metric-icon" /></div>
+          <div class="content">
+            <div class="title body-emphasized-14pt">Temperature</div>
+            <div class="value card-title-24pt">98.6°F</div>
+            <div class="sub body-secondary-info-14pt">Normal</div>
+          </div>
+        </div>
+        <div class="small-card hr-card">
+          <div class="icon-circle"><img src="assets/icons/HeartBPM@2x.png" alt="Heart Rate" class="metric-icon" /></div>
+          <div class="content">
+            <div class="title body-emphasized-14pt">Heart Rate</div>
+            <div class="value card-title-24pt">78 bpm</div>
+            <div class="sub body-secondary-info-14pt">Lower than Average</div>
+          </div>
+        </div>
+      </section>
+</div>
+
+      <!-- Diagnostic list -->
+      <section class="card diagnostic-list-card">
+        <div class="card-header">
+          <div class="title inner-card-title-18pt">Diagnostic List</div>
+        </div>
+        <div class="table-wrapper">
+          <table class="diagnostic-table">
+            <thead>
+              <tr>
+                <th>Problem/Diagnosis</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="diagnostics-container">
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right sidebar -->
+    <aside class="right-sidebar">
+
+<section class="profile-summary patient-card-panel">
+  <div class="patient-card-inner">
+    <div class="avatar-wrapper">
+      <img class="avatar-large" src="assets/avatars/jessica-taylor@2x.png" alt="Jessica Taylor profile picture" id="profile-pic-main" />
+    </div>
+    <div class="patient-info">
+      <h1 id="patient-name" class="card-title-24pt">Jessica Taylor</h1>
+      <div class="info-list">
+        <div class="info-item">
+          <div class="icon-circle" aria-hidden="true">
+            <!-- calendar icon placeholder -->
+            <img src="assets/icons/calendar_today_FILL0_wght300_GRAD0_opsz24@2x.png" alt="Date Of Birth" class="small-icon" />
+          </div>
+          <div class="text">
+            <div class="label body-secondary-info-14pt">Date Of Birth</div>
+            <div class="value body-emphasized-14pt" id="patient-dob">--</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle" aria-hidden="true">
+            <!-- gender icon -->
+            <img src="assets/icons/FemaleIcon@2x.png" alt="Gender" class="small-icon" />
+          </div>
+          <div class="text">
+            <div class="label body-secondary-info-14pt">Gender</div>
+            <div class="value body-emphasized-14pt" id="patient-gender-display">--</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle" aria-hidden="true">
+            <!-- phone icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.13 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.13-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.01.37 2 .75 2.94a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.13-1.13a2 2 0 0 1 2.11-.45c.94.38 1.93.63 2.94.75A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <div class="label body-secondary-info-14pt">Contact Info.</div>
+            <div class="value body-emphasized-14pt" id="patient-phone-display">--</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle" aria-hidden="true">
+            <!-- emergency contact icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.13 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.13-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.01.37 2 .75 2.94a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.13-1.13a2 2 0 0 1 2.11-.45c.94.38 1.93.63 2.94.75A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <div class="label body-secondary-info-14pt">Emergency Contacts</div>
+            <div class="value body-emphasized-14pt" id="patient-emergency-phone">--</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle" aria-hidden="true">
+            <!-- shield / insurance icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <div class="label body-secondary-info-14pt">Insurance Provider</div>
+            <div class="value body-emphasized-14pt" id="patient-insurance-display">--</div>
+          </div>
+        </div>
+      </div>
+      <div class="action-wrapper">
+        <button class="show-all-btn">Show All Information</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="lab-results card">
+        <div class="card-header">
+          <div class="title inner-card-title-18pt">Lab Results</div>
+        </div>
+        <div class="labs-list">
+          <div class="lab-row">
+            <div class="lab-name body-emphasized-14pt">Blood Tests</div>
+            <div class="download"><img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png" alt="download" class="inline-icon" /></div>
+          </div>
+          <div class="lab-row">
+            <div class="lab-name body-emphasized-14pt">CT Scans</div>
+            <div class="download"><img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png" alt="download" class="inline-icon" /></div>
+          </div>
+          <div class="lab-row">
+            <div class="lab-name body-emphasized-14pt">Radiology Reports</div>
+            <div class="download"><img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png" alt="download" class="inline-icon" /></div>
+          </div>
+          <div class="lab-row">
+            <div class="lab-name body-emphasized-14pt">X-Rays</div>
+            <div class="download"><img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png" alt="download" class="inline-icon" /></div>
+          </div>
+          <div class="lab-row">
+            <div class="lab-name body-emphasized-14pt">Urine Test</div>
+            <div class="download"><img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png" alt="download" class="inline-icon" /></div>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="js/api.js"></script>
+  <script src="js/chart.js"></script>
+</body>
+</html>
